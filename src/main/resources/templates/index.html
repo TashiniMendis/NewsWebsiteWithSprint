@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>News Website</title>
+</head>
+<body>
+<h1>Select a Category</h1>
+<ul>
+    <li th:each="category : ${categories}">
+        <a th:href="@{/category/{id}(id=${category.id})}" th:text="${category.name}">Category Name</a>
+    </li>
+</ul>
+</body>
+</html>
+
